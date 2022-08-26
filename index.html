@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/first%20html%20layout.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY FIRST WEBSITE LAYOUT</title>
+    <!-- <link rel="stylesheet" href="./style.css" />  -->
+    <style>
+      body {
+        background-image: url(https://i.pinimg.com/originals/19/1b/6d/191b6d669f008bfaf3950dd3e71ec2ca.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        width: 50px;
+        cursor: pointer;
+        margin: 30px 0;
+      }
+      .menu-icon {
+        width: 25px;
+        cursor: pointer;
+        display: none;
+      }
+      nav {
+        flex: 1;
+        text-align: right;
+      }
+      nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+      }
+      nav ul li a:hover {
+        color: #ff5ea2;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 100px 0;
+      }
+      .col-1 {
+        flex-basis: 40%;
+        position: relative;
+        margin-left: 50px;
+      }
+      .col-2 h2 {
+        font-size: 54px;
+      }
+      .col-2 h3 {
+        font-size: 30px;
+        color: #707070;
+        font-weight: 100;
+        margin: 20px 0 10px;
+      }
+      .col-1 p {
+        font-size: 16px;
+        color: #b7b7b7;
+        font-weight: 100;
+      }
+      .col-1 h4 {
+        margin: 30px 0;
+        font-size: 20px;
+      }
+      button {
+        width: 140px;
+        border: 0;
+        padding: 12px 10px;
+        outline: none;
+        color: white;
+        background: linear-gradient(to right, #fb5283, #ff3527);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: width 0.5s;
+      }
+      .arrow {
+        display: none;
+        width: 30px;
+        color: #000;
+      }
+      button:hover img {
+        display: block;
+      }
+      button:hover {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .col-1::after {
+        content: "";
+        width: 10px;
+        height: 57%;
+        background: linear-gradient(#ff469f, #ff6062);
+        position: absolute;
+        left: -40px;
+        top: 8px;
+      }
+      .col-2 {
+        position: relative;
+        flex-basis: 60%;
+        display: flex;
+        align-items: center;
+      }
+      .controller {
+        width: 75%;
+      }
+      .color-box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: linear-gradient(#ff54a2, #ff575a);
+        border-radius: 20px 0 0 20px;
+        height: 100%;
+        width: 80%;
+        z-index: -1;
+        transform: translateX(150px);
+      }
+      .add-btn img {
+        width: 35px;
+        margin-bottom: 5px;
+      }
+      .add-btn {
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        flex: 2;
+      }
+      .social-links img {
+        height: 20px;
+        margin: 20px;
+        cursor: pointer;
+      }
+      .social-links {
+        text-align: center;
+      }
+      @media only screen and (max-width: 1400px) {
+        nav ul {
+          width: 100%;
+          background: linear-gradient(#ff54a2, #ff575a);
+          position: absolute;
+          top: 75px;
+          right: 0;
+          z-index: 2;
+        }
+        nav ul li {
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        nav ul li a {
+          color: #fff;
+        }
+        .menu-icon {
+          display: block;
+          background-color: white;
+        }
+      }
+      #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .row {
+        flex-direction: column-reverse;
+
+        margin: 50px 0;
+      }
+      .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+      }
+      .col-1 h2 {
+        font-size: 35px;
+        color: white;
+      }
+      .col-1 h3 {
+        font-size: 35px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img class="logo" src="./final_files/ninja-logo.webp" alt="logo" />
+        <br />
+        <nav>
+          <ul id="menuList" style="max-height: 0px">
+            <li>
+              <a href="http://127.0.0.1:5500/files/thankyou.html"
+                >GAME CONTROLLERS</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/files/thankyou.html"
+                >VR ACCESSORIES</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/files/thankyou.html"
+                >MEDIA REMOTES</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/files/thankyou.html">OTHERS</a>
+            </li>
+          </ul>
+        </nav>
+        <img
+          class="menu-icon"
+          src="./final_files/menu-icon.png"
+          onclick="togglemenu()"
+          alt="icon"
+        />
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <h2>
+            PS4 v2 <br />
+            DUALSHOCK 4
+          </h2>
+          <h3>WIRELESS CONTROLLER FOR PLAYSTATION 4</h3>
+          <p>(compatible/generic)</p>
+          <h4>$35.50</h4>
+          <button type="button">
+            BUY NOW <img class="arrow" src="./final_files/1616.png" alt="" />
+          </button>
+        </div>
+        <div class="col-2">
+          <img
+            src="./final_files/60-601046_controller-xbox-one.png"
+            alt=""
+            class="controller"
+          />
+          <div class="color-box"></div>
+          <div class="add-btn">
+            <img src="./final_files/add-btn.png" alt="" />
+            <p><small>add to cart</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="social-links">
+        <img src="./final_files/fb-icon.jpg" alt="" />
+        <img src="./final_files/ig.png" alt="" />
+        <img src="./final_files/tw.png" alt="" />
+      </div>
+    </div>
+    <script>
+      var menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+      function togglemenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "130px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+    </script>
+  </body>
+</html>
